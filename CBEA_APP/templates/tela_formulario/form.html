@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo_pagina"></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <a id="btn_historico" href="http://127.0.0.1:8000/historico">Histórico clínico</a>
+            <a id="btn_acompanhamento" href="http://127.0.0.1:8000/acompanhamento">Acompanhamento</a>
+            <a id="btn_filacastracao" href="http://127.0.0.1:8000/filacastracao">Fila de castração</a>
+            <a id="btn_tutor" href="http://127.0.0.1:8000/tutor">Tutores</a>
+            <a id="btn_animal" href="http://127.0.0.1:8000/animal">Animais</a>
+            <a id="btn_atendimentosagendados" href="http://127.0.0.1:8000/atendimentosagendados">Atendimentos agendados - Consulta</a>
+            <a id="btn_agendar" href="http://127.0.0.1:8000/agendar">Agendar atendimentos</a>
+            <a id="btn_consulta" href="http://127.0.0.1:8000/consulta">Consulta</a>
+        </div>
+        <div class="main-content">
+            <h1 id="titulo" ></h1>
+            <div class="search-section">
+                <!-- Search section -->
+            </div>
+            <div class="form-section">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="button-section">
+                        <button type="submit">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="mensagem"></p>
+        </div>
+    </div>
+
+    <!-- Inclua o arquivo JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+
+    <!-- Campo oculto para controlar a exibição do modal -->
+    <input type="hidden" id="showModal" value="{{ show_modal }}">
+    
+</body>
+</html>
