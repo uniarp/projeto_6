@@ -53,6 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var url = window.location.href;
         switch (url) {
+            case 'http://127.0.0.1:8000/home':
+                //document.getElementById('btn_tutor').style.color = '#fff';
+                document.getElementById('btn_home').classList.add('active');
+                document.getElementById('titulo').innerText = 'teste';
+                break;
             case 'http://127.0.0.1:8000/tutor/':
                 //document.getElementById('btn_tutor').style.color = '#fff';
                 document.getElementById('btn_tutor').classList.add('active');

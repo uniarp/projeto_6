@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from CBEA_APP import views
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
+    path('home/', views.home),
     path('admin/', admin.site.urls),
     path('tutor/', views.tutor_form),
-    re_path('animal/', views.animal_form)
+    path('animal/', views.animal_form),
+    path('accounts/', include("django.contrib.auth.urls")),
+    
 
 ]

@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="titulo_pagina"></title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/styles_paginas.css' %}">
 
 </head>
 <body>
     <div class="wrapper">
         <div class="sidebar">
+            <a id="btn_home" href="http://127.0.0.1:8000/home">Inicio</a>
             <a id="btn_historico" href="http://127.0.0.1:8000/historico">Histórico clínico</a>
             <a id="btn_acompanhamento" href="http://127.0.0.1:8000/acompanhamento">Acompanhamento</a>
             <a id="btn_filacastracao" href="http://127.0.0.1:8000/filacastracao">Fila de castração</a>

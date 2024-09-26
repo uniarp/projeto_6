@@ -9,4 +9,4 @@ class TutorAdmin(admin.ModelAdmin):
     
 @admin.register(Animal)
 class AnimalAdmin(admin.ModelAdmin):
-    list_display = ('nome_animal','tipo', 'raca', 'idade', 'especie', 'peso', 'rfid', 'castrado')
+    list_display = ('nome_animal', 'raca', 'idade', 'especie', 'peso', 'rfid', 'castrado')

@@ -1,11 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 class Animal(models.Model):
     codigo_animal = models.AutoField,
     nome_animal = models.CharField(max_length=100)
-    tipo = models.CharField(max_length=20)
     raca = models.CharField(max_length=50)
     idade = models.IntegerField()
     especie = models.CharField(max_length=50)
@@ -15,11 +15,13 @@ class Animal(models.Model):
 
     def __str__(self):
         return self.nome_animal
-    
-class Funcionario(models.Model):
+
+
+
+class Funcionario(User):
     codigo_funcionario = models.AutoField,
     nome_funcionario = models.CharField(max_length=100),
-    login_funcionario = models.CharField(max_length=100),
+    usuario_funcionario = models.CharField(max_length=100),
     senha_funcionario = models.CharField(max_length=100)
 
     def __str__(self):

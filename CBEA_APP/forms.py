@@ -1,5 +1,5 @@
 from django import forms
-from .models import Tutor, Animal
+from .models import Tutor, Animal, Funcionario
 
 class TutorForm(forms.ModelForm):
     class Meta:
@@ -22,7 +22,6 @@ class AnimalForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'nome_animal': 'Nome do animal',
-            'tipo': 'Tipo',
             'raca': 'Raça',
             'idade': 'Idade',
             'especie': 'Espécie',
@@ -30,3 +29,14 @@ class AnimalForm(forms.ModelForm):
             'rfid': 'N° RFID',
             'castrado': 'Castrado'
         }
+
+class FuncionarioForm(forms.ModelForm):
+    class Meta:
+        model = Funcionario
+        fields = '__all__'
+        labels = {
+            'nome_funcionario': 'Nome do Funcionário',
+            'usuario_funcionario': 'Usuário Funcionário',
+            'senha_funcionario': 'Senha Funcionário'
+        }
+
