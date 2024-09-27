@@ -18,7 +18,7 @@ class Animal(models.Model):
 
 
 
-class Funcionario(User):
+class Funcionario(models.Model):
     codigo_funcionario = models.AutoField,
     nome_funcionario = models.CharField(max_length=100),
     usuario_funcionario = models.CharField(max_length=100),
