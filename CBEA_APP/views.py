@@ -38,3 +38,5 @@ def animal_form(request):
         form = AnimalForm()
     return render(request, 'telas/form.html', {'form': form, 'show_modal': False})
 
+def login2_view(request):
+    return render(request, 'registration/login2.html')
