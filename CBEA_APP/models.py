@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, FieldError
 from django.contrib.auth.models import User
 import re
 

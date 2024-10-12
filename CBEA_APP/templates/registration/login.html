@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <h2>Log In</h2>
-    <form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <a type="submit" href="http://127.0.0.1:8000/home">Log In</a>
-    </form></body>
+    <div>
+        <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <a class="btn_login" type="submit" href="http://127.0.0.1:8000/home">Log In</a>
+        </form>
+    </div>
+</body>
 </html>
