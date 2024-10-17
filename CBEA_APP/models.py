@@ -80,3 +80,13 @@ class Tutor(models.Model):
 
     def __str__(self):
         return self.nome_tutor
+
+class Agendar_consulta(models.Model):
+    nome_tutor = models.CharField(max_length=100)
+    nome_animal = models.CharField(max_length=100,)
+    telefone = models.CharField(max_length=15)
+    data = models.DateField()
+    hora = models.TimeField()
+
+    def __str__(self):
+        return self.nome_tutor

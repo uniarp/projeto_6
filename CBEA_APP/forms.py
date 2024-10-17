@@ -1,5 +1,5 @@
 from django import forms
-from .models import Tutor, Animal, Funcionario
+from .models import Agendar_consulta, Tutor, Animal, Funcionario
 
 class TutorForm(forms.ModelForm):
     class Meta:
@@ -14,6 +14,18 @@ class TutorForm(forms.ModelForm):
             'endereco': 'Endereço',
             'email': 'Email',
             'telefone': 'Telefone'
+        }
+
+class Agendar_consultaForm(forms.ModelForm):
+    class Meta:
+        model = Agendar_consulta
+        fields = '__all__'  # Inclui todos os campos do modelo
+        labels = {
+            'nome_tutor': 'Nome do tutor',
+            'nome_animal': 'Nome do animal',
+            'telefone': 'Telefone',
+            'data' : 'Data',
+            'hora' : 'Hora'
         }
 
 class AnimalForm(forms.ModelForm):
