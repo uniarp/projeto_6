@@ -69,6 +69,7 @@ class Funcionario(models.Model):
         return self.nome_funcionario
 
 class Tutor(models.Model):
+    codigo_tutor = models.AutoField(primary_key=True)
     nome_tutor = models.CharField(max_length=100)
     numero_cad = models.CharField(max_length=20)
     cpf = models.CharField(max_length=11)

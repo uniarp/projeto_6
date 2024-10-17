@@ -5,7 +5,7 @@ from .models import Agendar_consulta, Tutor, Animal
 
 @admin.register(Tutor)
 class TutorAdmin(admin.ModelAdmin):
-    list_display = ('nome_tutor', 'numero_cad', 'cpf', 'cidade', 'estado', 'endereco', 'email', 'telefone')
+    list_display = ('codigo_tutor','nome_tutor', 'numero_cad', 'cpf', 'cidade', 'estado', 'endereco', 'email', 'telefone')
 
 @admin.register(Agendar_consulta)
 class Agendar_consultaAdmin(admin.ModelAdmin):
@@ -13,4 +13,4 @@ class Agendar_consultaAdmin(admin.ModelAdmin):
     
 @admin.register(Animal)
 class AnimalAdmin(admin.ModelAdmin):
-    list_display = ('nome_animal', 'raca', 'idade', 'especie', 'peso', 'rfid', 'castrado')
+    list_display = ('codigo_animal','nome_animal', 'raca', 'idade', 'especie', 'peso', 'rfid', 'castrado')
